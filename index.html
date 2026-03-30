@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshBite — Food Delivery</title>
+    <meta name="description" content="FreshBite — Fast and fresh food delivery to your door">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span class="logo-icon">🍴</span> Fresh<span class="logo-accent">Bite</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#menu" data-lang-en="Menu" data-lang-ru="Меню">Menu</a>
+                <a href="#how" data-lang-en="How It Works" data-lang-ru="Как это работает">How It Works</a>
+                <a href="#restaurants" data-lang-en="Restaurants" data-lang-ru="Рестораны">Restaurants</a>
+                <a href="#reviews" data-lang-en="Reviews" data-lang-ru="Отзывы">Reviews</a>
+            </nav>
+            <div class="header-actions">
+                <button class="lang-btn" id="langBtn">EN</button>
+                <button class="order-fab" id="orderFab">
+                    <span class="fab-icon">🛒</span>
+                    <span class="fab-count" id="fabCount">0</span>
+                </button>
+                <button class="burger" id="burger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="float-emoji e1">🍕</div>
+        <div class="float-emoji e2">🍔</div>
+        <div class="float-emoji e3">🍣</div>
+        <div class="float-emoji e4">🌮</div>
+        <div class="float-emoji e5">🥗</div>
+        <div class="float-emoji e6">🍰</div>
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <div class="delivery-badge">
+                    <span class="badge-dot"></span>
+                    <span data-lang-en="~30 min delivery" data-lang-ru="~30 мин доставка">~30 min delivery</span>
+                </div>
+                <h1>
+                    <span data-lang-en="Delicious Food," data-lang-ru="Вкусная еда,">Delicious Food,</span>
+                    <em data-lang-en="Delivered Fast" data-lang-ru="Быстрая доставка">Delivered Fast</em>
+                </h1>
+                <p data-lang-en="Order from the best local restaurants with free delivery on your first order. Fresh ingredients, amazing taste." data-lang-ru="Заказывайте из лучших местных ресторанов с бесплатной доставкой на первый заказ. Свежие ингредиенты, потрясающий вкус.">Order from the best local restaurants with free delivery on your first order. Fresh ingredients, amazing taste.</p>
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" data-placeholder-en="What are you craving?" data-placeholder-ru="Что вы хотите?" placeholder="What are you craving?">
+                    <button class="search-btn" data-lang-en="Search" data-lang-ru="Найти">Search</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-plate">
+                    <div class="plate-circle"></div>
+                    <div class="food-item f1">🍝</div>
+                    <div class="food-item f2">🥑</div>
+                    <div class="food-item f3">🍅</div>
+                    <div class="food-item f4">🧀</div>
+                    <div class="food-item f5">🌿</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,40 C360,100 1080,0 1440,60 L1440,100 L0,100 Z" fill="#fff"/></svg>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="menu">
+        <div class="container">
+            <div class="cat-scroll">
+                <button class="cat-card active" data-category="all">
+                    <span class="cat-emoji">🍽️</span>
+                    <span data-lang-en="All" data-lang-ru="Все">All</span>
+                </button>
+                <button class="cat-card" data-category="pizza">
+                    <span class="cat-emoji">🍕</span>
+                    <span data-lang-en="Pizza" data-lang-ru="Пицца">Pizza</span>
+                </button>
+                <button class="cat-card" data-category="sushi">
+                    <span class="cat-emoji">🍣</span>
+                    <span data-lang-en="Sushi" data-lang-ru="Суши">Sushi</span>
+                </button>
+                <button class="cat-card" data-category="burgers">
+                    <span class="cat-emoji">🍔</span>
+                    <span data-lang-en="Burgers" data-lang-ru="Бургеры">Burgers</span>
+                </button>
+                <button class="cat-card" data-category="salads">
+                    <span class="cat-emoji">🥗</span>
+                    <span data-lang-en="Salads" data-lang-ru="Салаты">Salads</span>
+                </button>
+                <button class="cat-card" data-category="desserts">
+                    <span class="cat-emoji">🍰</span>
+                    <span data-lang-en="Desserts" data-lang-ru="Десерты">Desserts</span>
+                </button>
+                <button class="cat-card" data-category="asian">
+                    <span class="cat-emoji">🍜</span>
+                    <span data-lang-en="Asian" data-lang-ru="Азия">Asian</span>
+                </button>
+                <button class="cat-card" data-category="mexican">
+                    <span class="cat-emoji">🌮</span>
+                    <span data-lang-en="Mexican" data-lang-ru="Мексика">Mexican</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Dishes -->
+    <section class="dishes">
+        <div class="container">
+            <h2 class="section-title" data-lang-en="Popular Dishes" data-lang-ru="Популярные блюда">Popular Dishes</h2>
+            <div class="dishes-grid" id="dishesGrid">
+                <div class="dish-card" data-category="pizza" data-name="Margherita Pizza" data-name-ru="Пицца Маргарита" data-price="12.99">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#ff6b35,#e84118)">
+                        <span class="dish-emoji">🍕</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-meta">
+                            <span class="dish-restaurant">Mario's Kitchen</span>
+                            <span class="dish-rating">⭐ 4.8</span>
+                        </div>
+                        <h3 data-lang-en="Margherita Pizza" data-lang-ru="Пицца Маргарита">Margherita Pizza</h3>
+                        <div class="dish-bottom">
+                            <span class="dish-time">🕐 25 min</span>
+                            <span class="dish-price">$12.99</span>
+                            <button class="dish-add" aria-label="Add">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="sushi" data-name="Salmon Sushi Set" data-name-ru="Сет с лососем" data-price="18.50">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#2EC4B6,#1a936f)">
+                        <span class="dish-emoji">🍣</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-meta">
+                            <span class="dish-restaurant">Sakura House</span>
+                            <span class="dish-rating">⭐ 4.9</span>
+                        </div>
+                        <h3 data-lang-en="Salmon Sushi Set" data-lang-ru="Сет с лососем">Salmon Sushi Set</h3>
+                        <div class="dish-bottom">
+                            <span class="dish-time">🕐 35 min</span>
+                            <span class="dish-price">$18.50</span>
+                            <button class="dish-add" aria-label="Add">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="burgers" data-name="Classic Burger" data-name-ru="Классический бургер" data-price="9.99">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#f59e0b,#d97706)">
+                        <span class="dish-emoji">🍔</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-meta">
+                            <span class="dish-restaurant">Burger Lab</span>
+                            <span class="dish-rating">⭐ 4.7</span>
+                        </div>
+                        <h3 data-lang-en="Classic Burger" data-lang-ru="Классический бургер">Classic Burger</h3>
+                        <div class="dish-bottom">
+                            <span class="dish-time">🕐 20 min</span>
+                            <span class="dish-price">$9.99</span>
+                            <button class="dish-add" aria-label="Add">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="salads" data-name="Caesar Salad" data-name-ru="Салат Цезарь" data-price="8.50">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#84cc16,#65a30d)">
+                        <span class="dish-emoji">🥗</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-meta">
+                            <span class="dish-restaurant">Green Garden</span>
+                            <span class="dish-rating">⭐ 4.6</span>
+                        </div>
+                        <h3 data-lang-en="Caesar Salad" data-lang-ru="Салат Цезарь">Caesar Salad</h3>
+                        <div class="dish-bottom">
+                            <span class="dish-time">🕐 15 min</span>
+                            <span class="dish-price">$8.50</span>
+                            <button class="dish-add" aria-label="Add">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="desserts" data-name="Chocolate Cake" data-name-ru="Шоколадный торт" data-price="6.99">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+                        <span class="dish-emoji">🍰</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-meta">
+                            <span class="dish-restaurant">Sweet Dreams</span>
+                            <span class="dish-rating">⭐ 4.9</span>
+                        </div>
+                        <h3 data-lang-en="Chocolate Cake" data-lang-ru="Шоколадный торт">Chocolate Cake</h3>
+                        <div class="dish-bottom">
+                            <span class="dish-time">🕐 20 min</span>
+                            <span class="dish-price">$6.99</span>
+                            <button class="dish-add" aria-label="Add">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="asian" data-name="Pad Thai" data-name-ru="Пад Тай" data-price="14.99">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#ff6b35,#f97316)">
+                        <span class="dish-emoji">🍜</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-meta">
+                            <span class="dish-restaurant">Bangkok Street</span>
+                            <span class="dish-rating">⭐ 4.8</span>
+                        </div>
+                        <h3 data-lang-en="Pad Thai" data-lang-ru="Пад Тай">Pad Thai</h3>
+                        <div class="dish-bottom">
+                            <span class="dish-time">🕐 30 min</span>
+                            <span class="dish-price">$14.99</span>
+                            <button class="dish-add" aria-label="Add">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="mexican" data-name="Beef Tacos" data-name-ru="Тако с говядиной" data-price="11.50">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#ef4444,#dc2626)">
+                        <span class="dish-emoji">🌮</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-meta">
+                            <span class="dish-restaurant">Casa Mexicana</span>
+                            <span class="dish-rating">⭐ 4.7</span>
+                        </div>
+                        <h3 data-lang-en="Beef Tacos" data-lang-ru="Тако с говядиной">Beef Tacos</h3>
+                        <div class="dish-bottom">
+                            <span class="dish-time">🕐 25 min</span>
+                            <span class="dish-price">$11.50</span>
+                            <button class="dish-add" aria-label="Add">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="salads" data-name="Acai Bowl" data-name-ru="Асаи боул" data-price="10.99">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">
+                        <span class="dish-emoji">🫐</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-meta">
+                            <span class="dish-restaurant">Vita Bowls</span>
+                            <span class="dish-rating">⭐ 4.8</span>
+                        </div>
+                        <h3 data-lang-en="Acai Bowl" data-lang-ru="Асаи боул">Acai Bowl</h3>
+                        <div class="dish-bottom">
+                            <span class="dish-time">🕐 15 min</span>
+                            <span class="dish-price">$10.99</span>
+                            <button class="dish-add" aria-label="Add">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promos -->
+    <section class="promos">
+        <div class="container">
+            <div class="promos-scroll">
+                <div class="promo-card" style="background:linear-gradient(135deg,#ff6b35,#e84118)">
+                    <div class="promo-text">
+                        <span class="promo-badge">30% OFF</span>
+                        <h3 data-lang-en="First Order Discount" data-lang-ru="Скидка на первый заказ">First Order Discount</h3>
+                        <p data-lang-en="Use code FRESH30" data-lang-ru="Промокод FRESH30">Use code FRESH30</p>
+                    </div>
+                    <span class="promo-emoji">🎉</span>
+                </div>
+                <div class="promo-card" style="background:linear-gradient(135deg,#2EC4B6,#1a936f)">
+                    <div class="promo-text">
+                        <span class="promo-badge" data-lang-en="FREE" data-lang-ru="БЕСПЛАТНО">FREE</span>
+                        <h3 data-lang-en="Free Delivery on $25+" data-lang-ru="Бесплатная доставка от $25">Free Delivery on $25+</h3>
+                        <p data-lang-en="No minimum for pickup" data-lang-ru="Без минимума для самовывоза">No minimum for pickup</p>
+                    </div>
+                    <span class="promo-emoji">🚴</span>
+                </div>
+                <div class="promo-card" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9)">
+                    <div class="promo-text">
+                        <span class="promo-badge" data-lang-en="WEEKEND" data-lang-ru="ВЫХОДНЫЕ">WEEKEND</span>
+                        <h3 data-lang-en="Weekend Special Deals" data-lang-ru="Специальные предложения">Weekend Special Deals</h3>
+                        <p data-lang-en="Every Sat & Sun" data-lang-ru="Каждые Сб и Вс">Every Sat & Sun</p>
+                    </div>
+                    <span class="promo-emoji">🌟</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <h2 class="section-title" data-lang-en="How It Works" data-lang-ru="Как это работает">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <div class="step-icon">📱</div>
+                    <h3 data-lang-en="Choose Your Meal" data-lang-ru="Выберите блюдо">Choose Your Meal</h3>
+                    <p data-lang-en="Browse menus from hundreds of local restaurants and pick your favorites." data-lang-ru="Просмотрите меню из сотен местных ресторанов и выберите любимые блюда.">Browse menus from hundreds of local restaurants and pick your favorites.</p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <div class="step-icon">👨‍🍳</div>
+                    <h3 data-lang-en="We Prepare It" data-lang-ru="Мы готовим">We Prepare It</h3>
+                    <p data-lang-en="Our partner restaurants prepare your order with fresh, quality ingredients." data-lang-ru="Наши рестораны-партнёры готовят ваш заказ из свежих качественных продуктов.">Our partner restaurants prepare your order with fresh, quality ingredients.</p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <div class="step-icon">🚀</div>
+                    <h3 data-lang-en="Fast Delivery" data-lang-ru="Быстрая доставка">Fast Delivery</h3>
+                    <p data-lang-en="Your food arrives hot and fresh at your doorstep in about 30 minutes." data-lang-ru="Ваша еда прибудет горячей и свежей к вашей двери примерно за 30 минут.">Your food arrives hot and fresh at your doorstep in about 30 minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants -->
+    <section class="restaurants" id="restaurants">
+        <div class="container">
+            <h2 class="section-title" data-lang-en="Popular Restaurants" data-lang-ru="Популярные рестораны">Popular Restaurants</h2>
+            <div class="rest-grid">
+                <div class="rest-card">
+                    <div class="rest-img" style="background:linear-gradient(135deg,#ff6b35,#c0392b)"><span>🍕</span></div>
+                    <div class="rest-info">
+                        <h3>Mario's Kitchen</h3>
+                        <p data-lang-en="Italian Cuisine" data-lang-ru="Итальянская кухня">Italian Cuisine</p>
+                        <div class="rest-meta">
+                            <span>⭐ 4.8</span>
+                            <span>🕐 25-35 min</span>
+                            <span data-lang-en="Min $10" data-lang-ru="От $10">Min $10</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rest-card">
+                    <div class="rest-img" style="background:linear-gradient(135deg,#2EC4B6,#145e56)"><span>🍣</span></div>
+                    <div class="rest-info">
+                        <h3>Sakura House</h3>
+                        <p data-lang-en="Japanese Cuisine" data-lang-ru="Японская кухня">Japanese Cuisine</p>
+                        <div class="rest-meta">
+                            <span>⭐ 4.9</span>
+                            <span>🕐 30-40 min</span>
+                            <span data-lang-en="Min $15" data-lang-ru="От $15">Min $15</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rest-card">
+                    <div class="rest-img" style="background:linear-gradient(135deg,#f59e0b,#b45309)"><span>🍔</span></div>
+                    <div class="rest-info">
+                        <h3>Burger Lab</h3>
+                        <p data-lang-en="American Fast Food" data-lang-ru="Американский фастфуд">American Fast Food</p>
+                        <div class="rest-meta">
+                            <span>⭐ 4.7</span>
+                            <span>🕐 15-25 min</span>
+                            <span data-lang-en="Min $8" data-lang-ru="От $8">Min $8</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rest-card">
+                    <div class="rest-img" style="background:linear-gradient(135deg,#84cc16,#3f6212)"><span>🥗</span></div>
+                    <div class="rest-info">
+                        <h3>Green Garden</h3>
+                        <p data-lang-en="Healthy & Organic" data-lang-ru="Здоровое питание">Healthy & Organic</p>
+                        <div class="rest-meta">
+                            <span>⭐ 4.6</span>
+                            <span>🕐 15-20 min</span>
+                            <span data-lang-en="Min $12" data-lang-ru="От $12">Min $12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title" data-lang-en="What People Say" data-lang-ru="Что говорят люди">What People Say</h2>
+            <div class="reviews-carousel" id="reviewsCarousel">
+                <div class="review-card active">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p data-lang-en="The best food delivery app I've ever used! Fast delivery, amazing food quality, and great prices. Highly recommend!" data-lang-ru="Лучшее приложение для доставки еды! Быстрая доставка, отличное качество еды и прекрасные цены. Очень рекомендую!">"The best food delivery app I've ever used! Fast delivery, amazing food quality, and great prices. Highly recommend!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background:#ff6b35">SK</div>
+                        <div><strong>Sarah K.</strong><span data-lang-en="Regular Customer" data-lang-ru="Постоянный клиент">Regular Customer</span></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p data-lang-en="I love the variety of restaurants available. The sushi from Sakura House is always fresh and perfectly prepared." data-lang-ru="Мне нравится разнообразие ресторанов. Суши из Sakura House всегда свежие и идеально приготовленные.">"I love the variety of restaurants available. The sushi from Sakura House is always fresh and perfectly prepared."</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background:#2EC4B6">MR</div>
+                        <div><strong>Mike R.</strong><span data-lang-en="Food Enthusiast" data-lang-ru="Гурман">Food Enthusiast</span></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p data-lang-en="Quick ordering process and the food always arrives hot. The weekend deals are incredible — I save so much!" data-lang-ru="Быстрый процесс заказа и еда всегда приходит горячей. Выходные акции невероятные — я столько экономлю!">"Quick ordering process and the food always arrives hot. The weekend deals are incredible — I save so much!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background:#8b5cf6">AL</div>
+                        <div><strong>Anna L.</strong><span data-lang-en="Verified Buyer" data-lang-ru="Проверенный покупатель">Verified Buyer</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots">
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+                <button class="dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download -->
+    <section class="app-section">
+        <div class="container app-inner">
+            <div class="app-text">
+                <h2 data-lang-en="Get the FreshBite App" data-lang-ru="Скачайте приложение FreshBite">Get the FreshBite App</h2>
+                <p data-lang-en="Order food on the go with our mobile app. Available for iOS and Android." data-lang-ru="Заказывайте еду на ходу через наше приложение. Доступно для iOS и Android.">Order food on the go with our mobile app. Available for iOS and Android.</p>
+                <div class="app-buttons">
+                    <button class="app-btn"><span>🍎</span> App Store</button>
+                    <button class="app-btn"><span>▶️</span> Google Play</button>
+                </div>
+            </div>
+            <div class="app-phone">
+                <div class="phone-mock">
+                    <div class="phone-screen">
+                        <div class="phone-header">FreshBite</div>
+                        <div class="phone-search">🔍 Search...</div>
+                        <div class="phone-cards">
+                            <div class="phone-card" style="background:linear-gradient(135deg,#ff6b35,#e84118)">🍕</div>
+                            <div class="phone-card" style="background:linear-gradient(135deg,#2EC4B6,#1a936f)">🍣</div>
+                        </div>
+                        <div class="phone-cards">
+                            <div class="phone-card" style="background:linear-gradient(135deg,#f59e0b,#d97706)">🍔</div>
+                            <div class="phone-card" style="background:linear-gradient(135deg,#84cc16,#65a30d)">🥗</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <h4>Fresh<span class="logo-accent">Bite</span></h4>
+                <p data-lang-en="Delivering happiness, one meal at a time. Fresh, fast, and always delicious." data-lang-ru="Доставляем счастье, одно блюдо за раз. Свежее, быстрое и всегда вкусное.">Delivering happiness, one meal at a time. Fresh, fast, and always delicious.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-lang-en="Company" data-lang-ru="Компания">Company</h4>
+                <a href="#" data-lang-en="About Us" data-lang-ru="О нас">About Us</a>
+                <a href="#" data-lang-en="Careers" data-lang-ru="Карьера">Careers</a>
+                <a href="#" data-lang-en="Blog" data-lang-ru="Блог">Blog</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-lang-en="Support" data-lang-ru="Поддержка">Support</h4>
+                <a href="#" data-lang-en="Help Center" data-lang-ru="Помощь">Help Center</a>
+                <a href="#" data-lang-en="Safety" data-lang-ru="Безопасность">Safety</a>
+                <a href="#" data-lang-en="Terms" data-lang-ru="Условия">Terms</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-lang-en="Follow Us" data-lang-ru="Соцсети">Follow Us</h4>
+                <div class="social-row">
+                    <a href="#">📸</a>
+                    <a href="#">👤</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📌</a>
+                </div>
+                <div class="payment-row">
+                    <span>💳</span><span>🏧</span><span>💰</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FreshBite. <span data-lang-en="All rights reserved." data-lang-ru="Все права защищены.">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- Order Panel -->
+    <div class="order-overlay" id="orderOverlay"></div>
+    <div class="order-panel" id="orderPanel">
+        <div class="order-header">
+            <h3 data-lang-en="Your Order" data-lang-ru="Ваш заказ">Your Order</h3>
+            <button class="order-close" id="orderClose">✕</button>
+        </div>
+        <div class="order-items" id="orderItems">
+            <div class="order-empty" id="orderEmpty">
+                <span>🛒</span>
+                <p data-lang-en="Your cart is empty" data-lang-ru="Корзина пуста">Your cart is empty</p>
+            </div>
+        </div>
+        <div class="order-footer" id="orderFooter" style="display:none">
+            <div class="order-line"><span data-lang-en="Subtotal" data-lang-ru="Подитог">Subtotal</span><span id="orderSubtotal">$0</span></div>
+            <div class="order-line"><span data-lang-en="Delivery" data-lang-ru="Доставка">Delivery</span><span>$2.99</span></div>
+            <div class="order-line total"><span data-lang-en="Total" data-lang-ru="Итого">Total</span><span id="orderTotal">$0</span></div>
+            <button class="order-btn" data-lang-en="Place Order" data-lang-ru="Оформить заказ">Place Order</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
